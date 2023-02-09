@@ -1,0 +1,600 @@
+/*****General Config*****/
+
+* {
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: "lato", 'helvetica', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+  
+/*****Main*****/
+
+.main {
+    width: 1240px;
+    margin: auto;
+}
+
+/*****Header Section *****/
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.header_logo {
+    width: 270px;
+}
+
+/***** Section Search Recipes *****/
+
+.search_block {
+    position: relative;
+    width: 1240px;
+    margin: auto;
+}
+  
+.search_input {
+    background: #e7e7e7;
+    border: none;
+    border-radius: 5px;
+    padding: 1.5rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.search_input:focus{
+    outline: green 1px solid
+}
+  
+.search_input::placeholder {
+    color: black;
+    opacity: 0.25;
+    font-size: 18px;
+}
+  
+.search_button {
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 8px;
+    top: 14px;
+    height: 100%;
+}
+
+/*****Tags*****/
+
+.tag_ingredients_block {
+    left: 0;
+    width: 170px;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+  
+.tag_appliances_block {
+  left: 0;
+  width: 170px;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.tag_ustensils_block{
+  left: 0;
+  width: 170px;
+  margin-left: 33px;
+  margin-right: 0px;
+}
+
+#tags_selected_block {
+  display: flex;
+  left: 0;
+  top: 0;
+  margin-bottom: 1rem;
+}
+
+#tags_selected_block li {
+  width: 120px;
+  font-size: 14px;
+  font-weight: normal;
+  list-style: none;
+}
+
+#tags_selected_block .tag_ingredients_block .tag_ingredient {
+  background-color:#3282f7;
+  height: auto;
+  width: 150px;
+  color: #FFFF;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#tags_selected_block .tag_appliances_block .tag_appliance {
+  background-color:#68d9a4;
+  height: auto;
+  width: 150px;
+  color: #FFFF;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#tags_selected_block .tag_ustensils_block .tag_ustensil {
+  background-color:#ed6454;
+  height: auto;
+  width: 150px;
+  color: #FFF;
+  margin-top: 10px;
+  margin-left: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+/*****Filters*****/
+
+#filters_block {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 4;
+  gap: 2rem;
+  position: relative;
+}
+
+.filter_ingredients, .filter_appliances, .filter_ustensils {
+  border: none;
+  width: auto;
+  max-width: 667px;
+  margin: 0;
+}
+
+/*****Filters Ingredients*****/
+
+.filter_ingredients_template {
+  margin-left: 0;
+  width: 170px;
+  float: left;
+  overflow: hidden;
+}
+  
+.filter_ingredients_template input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+  
+.filter_ingredients_close {
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3282f7;
+  color: #FFFF;
+  width: 170px;
+  height: 70px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+  
+.filter_ingredients_close input {
+  position: absolute;
+  top: 0;
+  outline: none;
+  width: 100px;
+  height: 70px;
+  font-size: 1rem;
+  color: #FFFF;
+  background-color: #3282f7;
+  border: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 1rem;
+}
+  
+.filter_ingredients_header {
+  display: flex;
+  width: 170px;
+  height: 70px;
+  align-items: center;
+}
+
+.filter_ingredients_name {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.filter_ingredients_view {
+  flex-direction: column;
+  align-items: center;
+  color: #FFFF;
+  background-color: #3282f7;
+  font-weight: bold;
+  height: 70px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+.filter_ingredients_view header h2 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-right: 0;
+}
+
+.filter_ingredients_view header .fa-angle-up {
+  display: none;
+}
+
+.filter_ingredients_view input {
+  position: absolute;
+  outline: none;
+  width: 650px;
+  height: 70px;
+  font-size: 1rem;
+  color: #FFFF;
+  background-color: #3282f7;
+  border: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 1rem;
+}
+
+.filter_ingredients_angleUp {
+  color: #FFFF;
+  position: absolute;
+  left: 625px;
+  top: 34px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.filter_ingredients_list {
+  background-color: #3282f7;
+  overflow: scroll;
+  position: absolute;
+  width: 666px;
+  height: auto;
+  max-height: 275px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  padding: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.filter_ingredients_list li {
+  width: 30%;
+  padding: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 18px;
+  font-weight: normal;
+}
+.filter_ingredients_list li:hover{
+  text-decoration-line: underline;
+}
+
+/*****Filter Appliances*****/
+
+.filter_appliances_template {
+  margin-left: 0;
+  width: 170px;
+  float: left;
+  overflow: hidden;
+}
+
+.filter_appliances_template input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.filter_appliances_close {
+  align-items: center;
+  background-color: #68d9a4;
+  color: #FFFF;
+  width: 170px;
+  height: 70px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.filter_appliances_header {
+  display: flex;
+  width: 170px;
+  height: 70px;
+  align-items: center;
+}
+
+.filter_appliances_name {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.filter_appliances_view {
+  flex-direction: column;
+  align-items: center;
+  color: #FFFF;
+  background-color: #68d9a4;
+  font-weight: bold;
+  height: 70px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;  
+  overflow: hidden;
+}
+
+.filter_appliances_view header h2 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-right: 0;
+}
+
+.filter_appliances_view header .fa-angle-up {
+  display: none;
+}
+
+.filter_appliances_view input {
+  position: absolute;
+  outline: none;
+  width: 650px;
+  height: 70px;
+  font-size: 1rem;
+  color: #FFFF;
+  background-color: #68d9a4;
+  border: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 1rem;
+}
+
+.filter_appliances_angleUp {
+  color: #FFFF;
+  position: absolute;
+  left: 825px;
+  top: 34px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.filter_appliances_list {
+  background-color: #68d9a4;
+  overflow: scroll;
+  position: absolute;
+  width: 666px;
+  height: auto;
+  max-height: 275px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  padding: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.filter_appliances_list li {
+  width: 30%;
+  padding: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.filter_appliances_list li:hover{
+  text-decoration-line: underline;
+}
+
+
+/*****Filter Ustensils*****/
+
+.filter_ustensils_template {
+  margin-left: 0;
+  width: 170px;
+  float: left;
+  overflow: hidden;
+}
+
+.filter_ustensils_template input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.filter_ustensils_close {
+  align-items: center;
+  background-color: #ed6454;
+  color: #FFFF;
+  width: 170px;
+  height: 70px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.filter_ustensils_header {
+  display: flex;
+  width: 170px;
+  height: 70px;
+  align-items: center;
+}
+
+.filter_ustensils_name {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.filter_ustensils_view {
+  flex-direction: column;
+  align-items: center;
+  color: #FFFF;
+  background-color: #ed6454;
+  font-weight: bold;
+  height: 70px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+}
+
+.filter_ustensils_view header h2 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-right: 0;
+}
+
+.filter_ustensils_view header .fa-angle-up {
+  display: none;
+}
+
+.filter_ustensils_view input {
+  position: absolute;
+  outline: none;
+  width: 650px;
+  height: 70px;
+  font-size: 1rem;
+  color: #FFFF;
+  background-color: #ed6454;
+  border: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-left: 1rem;
+}
+
+.filter_ustensils_angleUp {
+  color: #FFFF;
+  position: absolute;
+  left: 1025px;
+  top: 34px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.filter_ustensils_list {
+  background-color: #ed6454;
+  overflow: scroll;
+  position: absolute;
+  width: 666px;
+  height: auto;
+  max-height: 275px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  padding: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.filter_ustensils_list li {
+  width: 30%;
+  padding: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.filter_ustensils_list li:hover{
+  text-decoration-line: underline;
+}
+
+
+/*****Recipes Section*****/
+
+
+#recipes_cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem 0 1rem 0;
+}
+
+#recipes_cards article {
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+
+#recipes_cards header {
+  display: flex;
+  justify-content: space-around;
+  align-items:baseline;
+  width: 380px;
+  padding: 20px 12px 0px 15px;
+  background-color: #e7e7e7;
+}
+
+.blank_space {
+  width: 380px;
+  height: 180px;
+  background-color: #c7bebe;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#recipes_cards .informations {
+  display: flex;
+  justify-content: space-around;
+  background-color: #e7e7e7;
+  width: 380px;
+  height: 150px;
+  font-size: 12px;
+  padding: 20px 0px 20px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#recipes_cards header h2 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-left: 0;
+  max-width: 215px;
+}
+
+#recipes_cards header h3 {
+  flex-direction: row;
+  padding: 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  max-height: 22px;
+}
+
+#recipes_cards header .duration_icon {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 16px;
+}
+
+#recipes_cards .ingredients_detailled_bloc {
+  padding-left: 15px;
+  overflow: scroll;
+  margin: 0;
+  width: 208px;
+}
+
+#recipes_cards .description {
+  text-overflow: ellipsis;
+  padding: 0rem 1rem;
+  width: 45%;
+  height: 108px;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/***** Error Message *****/
+
+.is_hidden {
+  display: none;
+}
+
+.no_result_message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ed6454;
+}
