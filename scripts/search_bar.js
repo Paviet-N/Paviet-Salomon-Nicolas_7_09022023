@@ -19,6 +19,7 @@ function searchLive() {
     mainInput = searchBarInput.value;
 
     const regex = new RegExp(`${mainInput.trim().toLowerCase()}`);
+
     recipesToDisplay = recipes.filter((recipe) => {
       let recipeIsMatching = false;
       if (regex.test(recipe.name.toLowerCase())) {
