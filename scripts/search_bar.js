@@ -20,20 +20,24 @@ function searchLive() {
 
     const regex = new RegExp(`${mainInput.trim().toLowerCase()}`);
 
-    recipesToDisplay = recipes.filter((recipe) => {
+    for ( let i = 0 ; i< recipes.length ; i++ )
+    {
       let recipeIsMatching = false;
-      if (regex.test(recipe.name.toLowerCase())) {
+      if (regex.test(recipes[i].name.toLowerCase())) {
         recipeIsMatching = true;
-      } else if (regex.test(recipe.description)) {
+      } else if (regex.test(recipes[i].description)) {
         recipeIsMatching = true;
       }
-      recipe.ingredients.forEach(({ ingredient }) => {
+      recipes[i].ingredients.forEach(({ ingredient }) => {
         if (regex.test(ingredient)) {
           recipeIsMatching = true;
         }
       });
-      return recipeIsMatching;
-    });
+      if (recipeIsMatching)
+      {
+        recipesToDisplay.push(recipes[i]);
+      }
+    }
     /* Remplir les filtres avec le tableau retourné */
     fillFilters(recipesToDisplay);
   }
