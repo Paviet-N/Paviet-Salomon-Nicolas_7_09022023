@@ -570,7 +570,7 @@ body {
 
 #recipes_cards .ingredients_detailled_bloc {
   padding-left: 15px;
-  overflow: scroll;
+  overflow: clip;
   margin: 0;
   width: 208px;
 }
@@ -579,12 +579,12 @@ body {
   text-overflow: ellipsis;
   padding: 0rem 1rem;
   width: 45%;
-  height: 108px;
+  height: 104px;
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow: clip;
 }
 
 /***** Error Message *****/
